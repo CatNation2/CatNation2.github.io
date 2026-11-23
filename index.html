@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Chemical Weapons: History, Law, and Political Consequences</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,wght@0,400;0,600;0,700;1,400&family=IBM+Plex+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --bg:#eef1f1; --surface:#ffffff; --ink:#1c2427; --muted:#56646a;
+  --rule:#cfd7d9; --accent:#2e5b58; --accent-ink:#ffffff; --note:#f3e9d2; --note-ink:#4a3b12;
+  --serif:"Source Serif 4",Georgia,"Times New Roman",serif;
+  --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Arial,sans-serif;
+}
+@media (prefers-color-scheme:dark){
+  :root{--bg:#141a1c;--surface:#1c2427;--ink:#e6ecee;--muted:#9fb0b5;--rule:#2f3b3f;--accent:#7fb8b2;--accent-ink:#10201f;--note:#2e2814;--note-ink:#eadfb8}
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;background:var(--bg);color:var(--ink);font:17px/1.65 var(--sans);display:flex;flex-direction:column;overflow:hidden}
+main{flex:1 1 auto;min-height:0;overflow-y:auto;overflow-x:hidden;-webkit-overflow-scrolling:touch;scroll-behavior:smooth;scroll-padding-top:8px}
+a{color:var(--accent)}
+:focus-visible{outline:3px solid var(--accent);outline-offset:2px}
+.wrap{max-width:900px;margin:0 auto;padding:0 20px}
+
+nav{flex:none;background:var(--surface);border-bottom:1px solid var(--rule)}
+nav ul{list-style:none;margin:0 auto;padding:0 20px;max-width:900px;display:flex;gap:4px;overflow-x:auto}
+nav a{display:block;padding:14px 12px;text-decoration:none;color:var(--muted);font-size:.9rem;font-weight:500;white-space:nowrap;border-bottom:3px solid transparent}
+nav a[aria-current]{color:var(--ink);border-bottom-color:var(--accent)}
+nav a:hover{color:var(--ink);border-bottom-color:var(--accent)}
+
+header.hero{border-bottom:1px solid var(--rule)}
+h1{font:700 clamp(2rem,5.5vw,3.4rem)/1.1 var(--serif);margin:0 0 20px;letter-spacing:-.01em;max-width:18ch}
+.lede{font:400 1.25rem/1.55 var(--serif);color:var(--muted);max-width:60ch;margin:0 0 28px}
+.btns{display:flex;flex-wrap:wrap;gap:10px}
+.btn{display:inline-block;padding:10px 18px;border:1.5px solid var(--accent);border-radius:3px;text-decoration:none;font-weight:600;font-size:.95rem;color:var(--accent)}
+.btn.primary{background:var(--accent);color:var(--accent-ink)}
+.btn:hover{filter:brightness(1.1)}
+
+.note{background:var(--note);color:var(--note-ink);border-left:4px solid #b08a2e;padding:14px 18px;margin:32px 0 0;font-size:.95rem;border-radius:0 3px 3px 0}
+
+section{padding:32px 0 8px}
+header.hero{padding:40px 0 32px}
+header.hero,main section{display:none}
+header.hero.on,main section.on{display:block}
+.timeline{columns:2 320px;column-gap:40px}
+.timeline li{break-inside:avoid}
+h2{font:600 clamp(1.6rem,3.5vw,2.1rem)/1.2 var(--serif);margin:0 0 8px}
+h3{font:600 1.2rem/1.3 var(--serif);margin:28px 0 6px}
+.sub{color:var(--muted);margin:0 0 24px;max-width:62ch}
+p{max-width:68ch}
+.placeholder{color:var(--muted);font-style:italic}
+
+/* Timeline: a real sequence, so the year is the marker */
+.timeline{list-style:none;margin:24px 0 0;padding:0;border-left:2px solid var(--rule)}
+.timeline li{position:relative;padding:0 0 22px 24px}
+.timeline li::before{content:"";position:absolute;left:-7px;top:9px;width:12px;height:12px;border-radius:50%;background:var(--accent);border:2px solid var(--bg)}
+.timeline .yr{font:700 1.15rem/1.4 var(--serif);display:block}
+.timeline p{margin:2px 0 0;color:var(--muted);font-size:.97rem}
+
+/* Case studies & collapsibles */
+details{background:var(--surface);border:1px solid var(--rule);border-radius:4px;margin:0 0 12px}
+summary{cursor:pointer;padding:16px 20px;font:600 1.1rem var(--serif);list-style:none;display:flex;justify-content:space-between;gap:12px}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";font:400 1.5rem/1 var(--sans);color:var(--accent)}
+details[open] summary::after{content:"\2212"}
+details[open] summary{border-bottom:1px solid var(--rule)}
+.case{padding:6px 20px 18px}
+.case dt{font-weight:600;margin-top:14px;color:var(--accent)}
+.case dd{margin:2px 0 0;max-width:66ch}
+
+/* Table */
+.tablewrap{overflow-x:auto;background:var(--surface);border:1px solid var(--rule);border-radius:4px}
+table{border-collapse:collapse;width:100%;min-width:640px;font-size:.95rem}
+th,td{text-align:left;padding:12px 16px;vertical-align:top;border-bottom:1px solid var(--rule)}
+th{background:var(--bg);font-weight:600}
+tr:last-child td{border-bottom:0}
+
+.grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:16px;margin-top:20px}
+.grid div{background:var(--surface);border:1px solid var(--rule);border-radius:4px;padding:16px 18px}
+.grid h3{margin:0 0 6px;font-size:1.05rem}
+.grid p{margin:0;font-size:.95rem;color:var(--muted)}
+
+ol.q,ul.res{max-width:66ch;padding-left:22px}
+ul.res li,ol.q li{margin-bottom:8px}
+
+footer{margin-top:64px;padding:32px 0 48px;border-top:1px solid var(--rule);color:var(--muted);font-size:.9rem}
+@media (prefers-reduced-motion:reduce){main{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+
+<nav aria-label="Site sections">
+  <ul>
+    <li><a href="#home">Home</a></li>
+    <li><a href="#timeline">Timeline</a></li>
+    <li><a href="#cases">Case studies</a></li>
+    <li><a href="#law">Law and treaties</a></li>
+    <li><a href="#politics">Political implications</a></li>
+    <li><a href="#memory">Human impact</a></li>
+    <li><a href="#resources">Resources</a></li>
+  </ul>
+</nav>
+
+<main>
+<header class="hero" id="home">
+  <div class="wrap">
+    <h1>Chemical weapons: history, law, and political consequences</h1>
+    <p class="lede">How a century of use, prohibition, and enforcement struggles shaped one of the strongest norms in international politics. [Edit: state your site’s research question here.]</p>
+    <div class="btns">
+      <a class="btn primary" href="#timeline">View the timeline</a>
+      <a class="btn" href="#law">Read the treaties</a>
+      <a class="btn" href="#cases">Explore case studies</a>
+    </div>
+    <p class="note"><strong>Content note:</strong> This site discusses mass-casualty events and their effects on civilians. It focuses on history, law, and policy, and does not include technical production details.</p>
+  </div>
+</header>
+
+<div class="wrap">
+
+<section id="timeline">
+  <h2>Historical timeline</h2>
+  <p class="sub">Key moments from early restrictions to present-day enforcement.</p>
+  <ol class="timeline">
+    <li><span class="yr">Antiquity to 19th century</span><p>Toxic smoke and poisons appear in sieges; the idea of banning “poison weapons” develops alongside the laws of war.</p></li>
+    <li><span class="yr">1899 and 1907</span><p>The Hague Conventions restrict poison and asphyxiating gas projectiles.</p></li>
+    <li><span class="yr">1915–1918</span><p>Large-scale use in World War I begins with chlorine at Ypres and spreads across the Western Front.</p></li>
+    <li><span class="yr">1925</span><p>The Geneva Protocol prohibits the use of chemical and bacteriological weapons in war.</p></li>
+    <li><span class="yr">1935–1945</span><p>Use in Ethiopia during the interwar period; stockpiles are built before World War II; poison gas is used in the Holocaust.</p></li>
+    <li><span class="yr">1960s–1988</span><p>Use in Yemen and during the Iran–Iraq War, including the 1988 attack on Halabja.</p></li>
+    <li><span class="yr">1993–1997</span><p>The Chemical Weapons Convention opens for signature in 1993 and enters into force in 1997; the OPCW is established.</p></li>
+    <li><span class="yr">1995</span><p>Aum Shinrikyo attacks the Tokyo subway, a landmark case of non-state use.</p></li>
+    <li><span class="yr">2013–2018</span><p>The Ghouta attack in Syria; Syria joins the Convention; OPCW–UN investigations; the 2018 Salisbury poisoning.</p></li>
+    <li><span class="yr">Today</span><p>Destruction of declared stockpiles, continued investigations, and debates over accountability. [Edit: add current developments.]</p></li>
+  </ol>
+</section>
+
+<section id="cases">
+  <h2>Major conflicts and case studies</h2>
+  <p class="sub">Each case follows the same structure so they can be compared.</p>
+
+  <details open>
+    <summary>World War I</summary>
+    <dl class="case">
+      <dt>Context</dt><dd>Western Front, 1915–1918. [Add detail.]</dd>
+      <dt>Event summary</dt><dd class="placeholder">Summarize the first major use and how it escalated.</dd>
+      <dt>Humanitarian impact</dt><dd class="placeholder">Casualty figures and long-term health effects, with sources.</dd>
+      <dt>International response</dt><dd class="placeholder">Path to the 1925 Geneva Protocol.</dd>
+      <dt>Legacy and lessons</dt><dd class="placeholder">Why the war shaped later arms control.</dd>
+      <dt>Sources</dt><dd class="placeholder">[Citations]</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>Iran–Iraq War and Halabja</summary>
+    <dl class="case">
+      <dt>Context</dt><dd>1980–1988. [Add detail.]</dd>
+      <dt>Event summary</dt><dd class="placeholder">Describe patterns of use and the March 1988 attack on Halabja.</dd>
+      <dt>Humanitarian impact</dt><dd class="placeholder">Civilian toll and survivor health.</dd>
+      <dt>International response</dt><dd class="placeholder">Reactions of states and the UN at the time.</dd>
+      <dt>Legacy and lessons</dt><dd class="placeholder">Effect on the push for the Chemical Weapons Convention.</dd>
+      <dt>Sources</dt><dd class="placeholder">[Citations]</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>Syria</summary>
+    <dl class="case">
+      <dt>Context</dt><dd>Civil war from 2011. [Add detail.]</dd>
+      <dt>Event summary</dt><dd class="placeholder">Ghouta (2013) and later incidents investigated by the OPCW and UN.</dd>
+      <dt>Humanitarian impact</dt><dd class="placeholder">Documented casualties and displacement.</dd>
+      <dt>International response</dt><dd class="placeholder">Accession to the Convention, the removal of declared stockpiles, Security Council disputes.</dd>
+      <dt>Legacy and lessons</dt><dd class="placeholder">Attribution and accountability challenges.</dd>
+      <dt>Sources</dt><dd class="placeholder">[Citations]</dd>
+    </dl>
+  </details>
+
+  <details>
+    <summary>Tokyo subway attack (non-state actor)</summary>
+    <dl class="case">
+      <dt>Context</dt><dd>Tokyo, March 1995. [Add detail.]</dd>
+      <dt>Event summary</dt><dd class="placeholder">Summarize the attack and the group responsible.</dd>
+      <dt>Humanitarian impact</dt><dd class="placeholder">Casualties and long-term effects on survivors.</dd>
+      <dt>International response</dt><dd class="placeholder">Counter-terrorism and policy changes.</dd>
+      <dt>Legacy and lessons</dt><dd class="placeholder">What it showed about non-state risks.</dd>
+      <dt>Sources</dt><dd class="placeholder">[Citations]</dd>
+    </dl>
+  </details>
+</section>
+
+<section id="law">
+  <h2>International law and treaties</h2>
+  <p class="sub">What each instrument covers, and where it falls short.</p>
+  <div class="tablewrap">
+    <table>
+      <thead><tr><th>Treaty</th><th>Year</th><th>What it covers</th><th>Limitations</th></tr></thead>
+      <tbody>
+        <tr><td>Hague Declaration and Conventions</td><td>1899, 1907</td><td>Restrict poison and asphyxiating gas projectiles in war.</td><td>Narrow wording; no verification.</td></tr>
+        <tr><td>Geneva Protocol</td><td>1925</td><td>Prohibits the use of chemical and bacteriological weapons.</td><td>Does not ban production or stockpiling; many states reserved a right of retaliation.</td></tr>
+        <tr><td>Chemical Weapons Convention</td><td>1993 (in force 1997)</td><td>Bans development, production, stockpiling, transfer, and use; requires destruction.</td><td>Not universal in practice; attribution and enforcement remain contested.</td></tr>
+      </tbody>
+    </table>
+  </div>
+
+  <h3>The OPCW</h3>
+  <p>The Organisation for the Prohibition of Chemical Weapons, based in The Hague, implements the Convention through declarations, inspections, and investigations. [Edit: add detail on its role.]</p>
+  <h3>Enforcement challenges</h3>
+  <p>Discuss states outside the treaty, attribution disputes, and politics at the UN Security Council. [Edit.]</p>
+  <p><a class="btn" href="https://www.opcw.org" target="_blank" rel="noopener">Visit the OPCW website</a></p>
+</section>
+
+<section id="politics">
+  <h2>Political and strategic implications</h2>
+  <p class="sub">Why the norm holds, where it strains, and who decides.</p>
+  <div class="grid">
+    <div><h3>Deterrence and the taboo</h3><p>How stigma, rather than military utility alone, shapes state behavior.</p></div>
+    <div><h3>Arms control and verification</h3><p>Inspections, declarations, and the politics of trust.</p></div>
+    <div><h3>Attribution and accountability</h3><p>Who investigates, who assigns blame, and who acts on findings.</p></div>
+    <div><h3>Sanctions and military responses</h3><p>Diplomatic and coercive tools used after confirmed use.</p></div>
+    <div><h3>Non-state actors</h3><p>Terrorism concerns and the limits of state-based treaties.</p></div>
+    <div><h3>Domestic politics</h3><p>Public opinion, legislative debate, and democratic oversight.</p></div>
+  </div>
+  <h3>Open debates</h3>
+  <p class="placeholder">Is the norm strengthening or eroding? Are enforcement gaps fixable? How should dual-use chemical technology be overseen?</p>
+</section>
+
+<section id="memory">
+  <h2>Ethics, human impact, and memory</h2>
+  <p class="sub">The people behind the policy.</p>
+  <h3>Survivor testimony</h3>
+  <p>Link to accounts from the ICRC, the UN, or documented archives. Use respectful, non-graphic imagery.</p>
+  <h3>Medical and environmental legacy</h3>
+  <p>Long-term health effects and the clean-up of legacy munitions. [Edit.]</p>
+  <h3>Memorials and commemoration</h3>
+  <p>[Edit: list memorials and remembrance days.]</p>
+  <h3>Discussion questions</h3>
+  <ol class="q">
+    <li>Why has the prohibition on chemical weapons proved stronger than many other arms-control norms?</li>
+    <li>What should happen when a state is found to have violated the Convention?</li>
+    <li>How should the world weigh retaliation, deterrence, and legal accountability?</li>
+  </ol>
+</section>
+
+<section id="resources">
+  <h2>Resources and bibliography</h2>
+  <h3>Primary sources</h3>
+  <ul class="res">
+    <li>Treaty texts (Hague, Geneva Protocol, Chemical Weapons Convention)</li>
+    <li>UN and OPCW reports and investigation findings</li>
+  </ul>
+  <h3>Secondary sources</h3>
+  <ul class="res"><li class="placeholder">[Books and journal articles in your chosen citation style]</li></ul>
+  <h3>Organizations</h3>
+  <ul class="res">
+    <li><a href="https://www.opcw.org" target="_blank" rel="noopener">Organisation for the Prohibition of Chemical Weapons</a></li>
+    <li><a href="https://www.icrc.org" target="_blank" rel="noopener">International Committee of the Red Cross</a></li>
+    <li><a href="https://disarmament.unoda.org" target="_blank" rel="noopener">UN Office for Disarmament Affairs</a></li>
+  </ul>
+</section>
+
+<footer>
+  <p>[Your name or class] · Last updated [date]. Image credits and licenses: [add here].</p>
+</footer>
+
+</div>
+</main>
+<script>
+var panels=[].slice.call(document.querySelectorAll('header.hero, main section'));
+var main=document.querySelector('main');
+function show(id){
+  var found=false;
+  panels.forEach(function(p){var on=p.id===id;p.classList.toggle('on',on);if(on)found=true;});
+  if(!found){panels[0].classList.add('on');id=panels[0].id;}
+  document.querySelectorAll('nav a').forEach(function(a){
+    if(a.getAttribute('href')==='#'+id){a.setAttribute('aria-current','page');}else{a.removeAttribute('aria-current');}
+  });
+  main.scrollTop=0;
+}
+document.querySelectorAll('a[href^="#"]').forEach(function(a){
+  a.addEventListener('click',function(e){e.preventDefault();show(a.getAttribute('href').slice(1));});
+});
+show('home');
+</script>
+</body>
+</html>
