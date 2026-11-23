@@ -1,12 +1,12 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
+<html lang="en"><head>
+
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>Chemical Warfare Agents</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;600;700&display=swap" rel="stylesheet">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin="">
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&amp;family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&amp;family=Libre+Franklin:wght@400;600;700&amp;display=swap" rel="stylesheet">
 <style>
   :root{
     --paper:#ffffff; --ink:#121212; --soft:#555555; --rule:#d9d9d9;
@@ -37,12 +37,11 @@
   .line{border-top:1px solid var(--rule);margin:34px 0}
 
   /* Body */
-  .cols{column-count:3;column-gap:34px;column-rule:1px solid var(--rule);font-size:1.02rem;text-align:justify;hyphens:auto}
-  .cols p{margin:0 0 1em}
-  .cols p:first-of-type::first-letter{font-family:var(--serif);font-weight:700;float:left;font-size:4.2rem;line-height:.82;padding:6px 8px 0 0}
+  .cols{column-count:3;column-gap:34px;column-rule:1px solid var(--rule);font-size:1.02rem;text-align:left;hyphens:manual}
+  .cols p{margin:0 0 1em;padding:0;text-indent:0}
+  .cols.single{column-count:1;column-rule:0;max-width:720px;margin:0 auto}
   h2{font-family:var(--sans);font-weight:700;font-size:1.05rem;margin:0 0 14px;padding-top:10px;border-top:4px solid var(--ink);break-after:avoid}
   .section{margin-bottom:46px}
-  .section.rest .cols p:first-of-type::first-letter{all:unset}
 
   blockquote{margin:0 auto;max-width:760px;padding:26px 0;text-align:center;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
   blockquote p{font-style:italic;font-size:clamp(1.3rem,3vw,1.9rem);line-height:1.35;margin:0}
@@ -63,24 +62,21 @@
     .three article{padding:0 0 24px;border-left:0}
   }
   @media (max-width:560px){
-    .cols{column-count:1;text-align:left}
+    .cols{column-count:1}
   }
   @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
-</style>
+</style><link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header class="wrap">
-  <h1 class="masthead" 
-    style="font-family:'Playfair Display',serif;font-size:clamp(2.2rem,7vw,4.6rem);font-weight:700;letter-spacing:.01em;margin:0"></h1>
-    Chemical Warfare Agents
-  </h1>
+  
   <div class="double">
-    <nav aria-label="Sections">
+    <nav aria-label="Sections" class="">
       <a href="#history">Chemical Warfare Agents</a>
-      <a href="#treatment">Treatment</a>
-      <a href="#chemical">Chemical decontamination</a>
-      <a href="#mechanical">Mechanical decontamination</a>
-      <a href="#physical">Physical decontamination</a>
+      <a href="#treatment" class="">Treatment</a>
+      <a href="#chemical" class="">Chemical decontamination</a>
+      <a href="#mechanical" class="">Mechanical decontamination</a>
+      <a href="#physical" class="" style="position: relative;">Physical decontamination</a>
     </nav>
   </div>
   <div class="thin"></div>
@@ -88,40 +84,40 @@
 
 <main class="wrap">
   <section class="top" id="history">
-    <h1>Chemical weapons: history, law, and political consequences</h1>
-    <p class="deck">From poisoned tipped arrows to nerve agents, humans throughout history have created a multitude of chemical and biological agents for the use of war.</p>
+    
+    <h1 class="" style="">Chemical weapons: history, law, and political consequences</h1><p class="deck">From poisoned tipped arrows to nerve agents, humans throughout history have created a multitude of chemical and biological agents for the use of war.</p>
   </section>
 
   <div class="line"></div>
 
   <section class="section">
-    <h2>Ancient civilizations</h2>
+    <h2 class="">Ancient civilizations</h2>
     <div class="cols">
-      <p>As early as 10,000 BCE there was evidence that poisoned arrowheads were used in Africa. Ancient civilizations often used poisonous animals and plants to their advantage. Specifically using an arsenic-laced fog in China around 3000 BCE. The poisoning of wells with hellebore roots during the Siege of Kirrha. The Assyrian use of ergot alkaloids to contaminate water sources. Other accounts describing mandrake root being used to incapacitate people along with using toxic smoke as a weapon.</p>
-      <p>Later, during 100 CE to the late medieval period, more reports of chemical weapons were being used. The Romans used cherry laurels to make cyanide. Both the Chinese and Mongols often used smoke and firebombs that were made from niter and petroleum. Famously, Greek fire used by the Byzantines was a petroleum firebomb that ignited on contact with water and burned while being in water. During this period historical analysis showed that in siege warfare they often used arsenic projectiles and stink bombs.</p>
-      <p>During the First World War, chemical warfare came into use and the image that we think of when we say chemical warfare. For the first time, largescale laboratory synthesized agents were deployed in war. Most famously chlorine, phosgene, mustard gas, and chloropicrin were all commonly used. In addition, in 1916 the French started using hydrogen cyanide, which marked the first time in history that a blood agent was used as a weapon of war.</p>
+      <p class="">From poisoned tipped arrows to nerve agents, humans throughout history have created a multitude of chemical and biological agents for the use of war. As early as 10,000 BCE, evidence suggests ancient humans applied poisons derived from insects or animal venoms on arrowheads. Historically, China (approximately 3000 BCE) laced fog with arsenic and Mesopotamians intentionally contaminated water sources.</p>
+      <p class="">Later, during 100 CE to the late medieval period, other societies weaponized chemical agents. The Romans extracted cyanide from cherry laurels. Both the Chinese and Mongols burned niter or petroleum to fumigate crude gas-agents. Using a similar concoction, Byzantines famously ignited water sources to burn warships. Throughout this period, arsenic projectiles and stink bombs had also become notorious.</p>
+      <p class="">During the First World War, the form of chemical warfare familiar to most of us emerged. Military funded laboratories synthesized chlorine, phosgene, mustard gas, and chloropicrin for the purpose of inflicting mass casualties. In addition, in 1916 the French employed hydrogen cyanide, which marked the first weaponization of its particular kind.</p>
     </div>
   </section>
 
-  <blockquote>
-    <p>As the war ended a reported 1.3 million soldiers had been injured and 90,000 killed by (CWAs).</p>
+  <blockquote class="">
+    <p class="">As the war ended a reported 1.3 million soldiers had been injured and 90,000 killed by (CWAs).</p>
   </blockquote>
 
   <div class="line"></div>
 
-  <section class="section rest">
-    <h2>Memories of the horrors of CWAs</h2>
-    <div class="cols">
-      <p>Memories of the horrors of CWAs was not forgotten, so in 1925 an international treaty was signed to ban the usage of CWAs in warfare. However, enforcing the treaty was difficult and often was no significant penalties if they used CWAs.</p>
-      <p>Chemical agents often leave painful and often fatal wounds on those affected with indiscriminate effects on civilians as well. Historical remedies like herbal treatments were often ineffective for victims.</p>
+  <section class="section">
+    <h2 class="">Memories of the Horrors of CWAs</h2>
+    <p class="" style="">The horrors of CWAs endured, so in 1925 an international treaty was signed to ban the usage of CWAs in warfare. However, enforcing the treaty was often difficult, as the treaty stated no significant penalties for CWAs.</p><p class="" style="">Chemical agents leave painful and often fatal wounds on those affected with indiscriminate effects on civilians as well. Historical remedies like herbal treatments were proven ineffective.</p><div class="cols single">
+      
+      
     </div>
   </section>
 
   <section class="section" id="treatment">
     <h2>The dangers of Chemical Warfare Agents (CWAs)</h2>
     <div class="cols">
-      <p>The dangers of Chemical Warfare Agents (CWAs) are ever present still in the present. As such knowing how to treat of CWAs is needed. Treatment mainly falls into 3 categories, mechanical, physical, and chemical decontamination.</p>
-      <p>However not all CWAs can be treated by same methods. For example, sulfur gas is a more difficult CWA to be treated. Injuries on the skin may need specialized dressings, eye injuries may need lubricants and antibiotics, and lung injuries may need antibiotics, intubation, and surgery.</p>
+      <p class="">The dangers of Chemical Warfare Agents (CWAs) remain relevant, and the treatment equally. Treatment mainly falls into 3 categories, mechanical, physical, and chemical decontamination.</p>
+      <p class="">However not all CWAs can be treated by same methods. For example, sulfur gas is a more difficult CWA to be treated. Injuries on the skin may need specialized dressings, eye injuries may need lubricants and antibiotics, and lung injuries may need antibiotics, intubation, and surgery.</p>
       <p>In addition, some specific treatments are better suited for specific types of CWAs, while others are more effective based on the amount of CWA present. RSDL is more suited for agents that use organophosphates, such as sarin or VX. Compared to Catalyst treatments and metal organic framework that are extreme effective on CWA but only on smaller spills.</p>
     </div>
   </section>
@@ -129,7 +125,7 @@
   <div class="three">
     <article id="chemical">
       <h3>Chemical decontamination</h3>
-      <p>Chemical decontamination refers to using reactive substances to change CWAs into less harmful products. 2-PAM and atropine are common antidotes to counter CWAs and an example of chemical decontamination. Super Tropical Bleach, a hypochlorite, reacts to break down contaminants and is used to clean vehicles. Catalyst treatments use catalysts to accelerate the breakdown of CWAs, while metal organic framework treatment capture contaminants and promoting the breakdown of CWAs.</p>
+      <p class="">Chemical decontamination refers to using reactive substances to change CWAs into less harmful products. 2-PAM and atropine are common antidotes to counter CWAs and an example of chemical decontamination. Super Tropical Bleach, a hypochlorite, reacts to break down contaminants and is used to clean vehicles. Catalyst treatments use catalysts to accelerate the breakdown of CWAs, while metal organic framework treatment capture contaminants and promoting the breakdown of CWAs.</p>
     </article>
     <article id="mechanical">
       <h3>Mechanical decontamination</h3>
@@ -143,5 +139,5 @@
 </main>
 
 <footer class="wrap">Chemical Warfare Agents (CWAs)</footer>
-</body>
-</html>
+
+</body></html>
