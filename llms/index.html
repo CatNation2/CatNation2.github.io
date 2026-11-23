@@ -1,0 +1,162 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Artificial Intelligence and Malware</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=UnifrakturCook:wght@700&family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Libre+Franklin:wght@400;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --paper:#ffffff; --ink:#121212; --soft:#555555; --rule:#d9d9d9;
+    --blackletter:'UnifrakturCook','Old English Text MT',Georgia,serif;
+    --serif:'Libre Caslon Text',Georgia,'Times New Roman',serif;
+    --sans:'Libre Franklin','Helvetica Neue',Arial,sans-serif;
+  }
+  *{box-sizing:border-box}
+  html{scroll-behavior:smooth}
+  body{margin:0;background:var(--paper);color:var(--ink);font-family:var(--serif);line-height:1.65}
+  a{color:inherit}
+  a:focus-visible{outline:2px solid var(--ink);outline-offset:3px}
+  .wrap{max-width:1040px;margin:0 auto;padding:0 20px}
+
+  header{padding-top:28px;text-align:center}
+  .masthead{font-family:var(--blackletter);font-weight:700;font-size:clamp(2.2rem,7vw,4.6rem);line-height:1.1;margin:0;letter-spacing:.01em}
+  .double{border-top:1px solid var(--ink);border-bottom:3px double var(--ink);margin-top:18px}
+  nav{display:flex;justify-content:center;flex-wrap:wrap;gap:6px 28px;padding:10px 0;font-family:var(--sans);font-size:.82rem;font-weight:600}
+  nav a{text-decoration:none;padding:2px 0;border-bottom:2px solid transparent}
+  nav a:hover{border-bottom-color:var(--ink)}
+  .thin{border-bottom:1px solid var(--ink)}
+
+  .top{padding:44px 0 28px;text-align:center;max-width:820px;margin:0 auto}
+  h1{font-family:var(--serif);font-weight:700;font-size:clamp(2rem,5.2vw,3.6rem);line-height:1.12;margin:0 0 18px;letter-spacing:-.01em}
+  .deck{font-size:clamp(1.1rem,2.2vw,1.35rem);line-height:1.5;color:var(--soft);margin:0}
+  .line{border-top:1px solid var(--rule);margin:34px 0}
+
+  .cols{column-count:3;column-gap:34px;column-rule:1px solid var(--rule);font-size:1.02rem;text-align:left;hyphens:manual}
+  .cols p{margin:0 0 1em;padding:0;text-indent:0}
+  .cols.single{column-count:1;column-rule:0;max-width:720px;margin:0 auto}
+  h2{font-family:var(--sans);font-weight:700;font-size:1.05rem;margin:0 0 14px;padding-top:10px;border-top:4px solid var(--ink);break-after:avoid}
+  .section{margin-bottom:46px}
+
+  blockquote{margin:0 auto;max-width:760px;padding:26px 0;text-align:center;border-top:1px solid var(--ink);border-bottom:1px solid var(--ink)}
+  blockquote p{font-style:italic;font-size:clamp(1.3rem,3vw,1.9rem);line-height:1.35;margin:0}
+
+  .three{display:grid;grid-template-columns:repeat(3,1fr);gap:0;margin-bottom:46px}
+  .three article{padding:0 26px;border-left:1px solid var(--rule)}
+  .three article:first-child{padding-left:0;border-left:0}
+  .three article:last-child{padding-right:0}
+  .stat{font-family:var(--serif);font-weight:700;font-size:clamp(2.2rem,5vw,3.2rem);line-height:1.1;margin:0 0 10px;padding-top:10px;border-top:4px solid var(--ink)}
+  .three p{margin:0 0 1em;font-size:1rem}
+
+  footer{border-top:3px double var(--ink);margin-top:20px;padding:18px 0 40px;text-align:center;font-family:var(--sans);font-size:.8rem;color:var(--soft)}
+
+  @media (max-width:860px){
+    .cols{column-count:2}
+    .three{grid-template-columns:1fr}
+    .three article{padding:0 0 24px;border-left:0}
+  }
+  @media (max-width:560px){
+    .cols{column-count:1}
+  }
+  @media (prefers-reduced-motion:reduce){html{scroll-behavior:auto}}
+</style>
+</head>
+<body>
+<header class="wrap">
+  <h1 class="masthead">Artificial Intelligence</h1>
+  <div class="double">
+    <nav aria-label="Sections">
+        <a href="https://sites.google.com/iu.edu/fa26-copy-of-science-unfiltere?usp=sharing">Return</a>
+      <a href="#malware">Malware</a>
+      <a href="#detection">Detection</a>
+      <a href="#limitations">Limitations</a>
+      <a href="#overall">Overall</a>
+    </nav>
+  </div>
+  <div class="thin"></div>
+</header>
+
+<main class="wrap">
+  <section class="top">
+    <h1>AI has demonstrated strong potential for improving malware detection accuracy</h1>
+    <p class="deck">However, high accuracy scores do not guarantee consistent performance in real-world situations.</p>
+  </section>
+
+  <div class="line"></div>
+
+  <section class="section" id="malware">
+    <h2>Malware</h2>
+    <div class="cols">
+      <p>For the latter part of the 21st century, computers have taken over all aspects of daily life, with cybercriminals relying on malware to steal credentials or take control of a device. Researchers and cyber-threat intelligence agencies have relied on humans to manually create signature databases to assist in the detection of malware.</p>
+      <p>In today’s landscape, researchers struggle to keep up with the sheer volume of malicious software created, and malware authors have found ways to make existing malware strains much more difficult to analyze and detect. To put it simply, malware is a sequence of malicious code designed to serve its nefarious purposes. A threat intelligence agency like CrowdStrike might flag specific pieces of code as malicious to prevent the compromise of a user's device. Bad actors have responded by creating additional malware variants that compose new code that isn’t detected by security products or use a concept called obfuscation to hide the malware code or behavior.</p>
+      <p>Proven for its data flexibility, AI has been hypothesized to be the future cornerstone of anti-malware services, reducing the need for tedious manual research. Many are likely familiar with AI-models like Chat-GPT, Claude, and Gemini, models that are driven by machine learning technology called large language models. These LLMs are not only effective at language tasks like writing papers or poems, but also at coding and assisting developers.</p>
+    </div>
+  </section>
+
+  <blockquote>
+    <p>Results show that AI has a high accuracy for detecting malicious software and can even identify new procedures that were previously undocumented.</p>
+  </blockquote>
+
+  <div class="line"></div>
+
+  <section class="section">
+    <div class="cols single">
+      <p>Researchers put this theory to the test by creating custom LLM agents and workflows to assess the capabilities of AI in malware research and prevention. Results show that AI has a high accuracy for detecting malicious software and can even identify new procedures that were previously undocumented. Existing commercials LLMs like the ones mentioned earlier are also proven highly capable when provided the proper instructions or prompt from researchers.</p>
+    </div>
+  </section>
+
+  <section class="section" id="detection">
+    <h2>Detection</h2>
+    <div class="cols single">
+      <p>Artificial intelligence (AI), particularly machine learning (ML) and large language models (LLMs), has shown promising results in improving malware detection. These technologies can identify suspicious patterns and behaviors that traditional antivirus software may overlook. However, their accuracy and reliability remain important challenges in cybersecurity. Machine learning models can detect malware by analyzing file structures, images, and software behavior.</p>
+    </div>
+  </section>
+
+  <div class="three">
+    <article>
+      <p class="stat">85–90%</p>
+      <p>Research by Brosolo et al. (2026) found that visual malware detection models achieved approximately 85–90% accuracy.</p>
+    </article>
+    <article>
+      <p class="stat">93.25%</p>
+      <p>Similarly, Zhou et al. (2026) developed TTPDetect, an LLM-based system that achieved 93.25% precision and 93.81% recall when recognizing malware techniques at the function level.</p>
+    </article>
+    <article>
+      <p class="stat">97%</p>
+      <p>Cristea et al. (2025) also reported that MalCVE achieved an average accuracy of 97% when identifying malicious Java files and associating them with known vulnerabilities.</p>
+    </article>
+  </div>
+
+  <section class="section">
+    <div class="cols single">
+      <p>These findings demonstrate the potential of AI to recognize malware beyond traditional signature-based detection.</p>
+    </div>
+  </section>
+
+  <section class="section" id="limitations">
+    <h2>Limitations</h2>
+    <div class="cols">
+      <p>Despite these results, AI systems have several limitations. Models may fail to recognize malware that uses encryption, code modification, or obfuscation techniques. Their accuracy can also decrease when analyzing malware variants that were not included in their training data.</p>
+      <p>Additionally, LLMs can generate incorrect information or identify suspicious behaviors without providing sufficient evidence to support their conclusions. Another major limitation is the ability to analyze large files. Malware programs can contain thousands of functions, exceeding the context limits of some LLMs.</p>
+      <p>Processing requirements also create accessibility challenges because certain models require expensive subscriptions, powerful CPUs, or dedicated GPUs.</p>
+    </div>
+  </section>
+
+  <section class="section" id="overall">
+    <h2>Overall</h2>
+    <div class="cols single">
+      <p>Overall, AI has demonstrated strong potential for improving malware detection accuracy. However, high accuracy scores do not guarantee consistent performance in real-world situations. Continued testing, human verification, and improvements in model reliability are necessary before AI can become a dependable replacement for traditional malware detection methods.</p>
+    </div>
+  </section>
+
+  <blockquote>
+    <p>For now, AI is most effective as a supporting tool for cybersecurity professionals.</p>
+  </blockquote>
+</main>
+
+<footer class="wrap">Artificial Intelligence (AI)</footer>
+</body>
+</html>
+ 
